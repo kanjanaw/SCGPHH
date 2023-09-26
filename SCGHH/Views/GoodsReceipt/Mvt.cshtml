@@ -89,11 +89,11 @@
             </div>
 
             <div class="col-4">
-                <label for="entryQuantity" class="font-size-75">Quantity</label>
+                <label for="entryWeight" class="font-size-75">Weight</label>
             </div>
             <div class="col-8">
                 <!-- get value -->
-                <input type="text" id="entryQuantity" class="form-control form-control-22">
+                <input type="text" id="entryWeight" class="form-control form-control-22">
             </div>
 
             <div class="col-4">
@@ -210,11 +210,11 @@
             </div>
 
             <div class="col-4">
-                <label for="entryQuantity" class="font-size-75">Quantity</label>
+                <label for="entryWeight" class="font-size-75">Weight</label>
             </div>
             <div class="col-8">
                 <!-- get value -->
-                <input type="text" id="entryQuantity" class="form-control form-control-22">
+                <input type="text" id="entryWeight" class="form-control form-control-22">
             </div>
 
             <div class="col-4">
@@ -272,16 +272,102 @@
         <!-- end 102 Form -->
 
 
-        <div class="row mx-0 my-4 pb-4 justify-content-between text-center d-none" id="formButton">
+        <div class="row mx-0 my-4 justify-content-between text-center d-none" id="formButton">
             <a href="#" class="col-6 btn-blue btn-col-6">
-                <button type="button" class="btn-blue">OK</button>
+                <button type="button" class="btn-blue">Save</button>
             </a>
-            <a href="/goodsreceipt/mainmenu" class="col-6 btn-black btn-col-6">
-                <button type="button" class="btn-black">Back</button>
+            <a href="#" class="col-6 btn-red btn-col-6">
+                <button type="button" class="btn-red">Clear</button>
             </a>
         </div>
 
     </form>
+
+    <div class="d-none" id="detailTable">
+        <div class="row mx-0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">No</th>
+                        <th scope="col">Batch</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">Material</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="h5 fa-regular fa-trash-can" style="color: #929292;"></i></a></td>
+                        <td>1</td>
+                        <td>118A07708A</td>
+                        <td>1.280</td>
+                        <td>Z02CA-150D1690117N</td>
+                    </tr>
+                    <tr>
+                        <td><a data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="h5 fa-regular fa-trash-can" style="color: #929292;"></i></a></td>
+                        <td>2</td>
+                        <td>118A07708A</td>
+                        <td>1.280</td>
+                        <td>Z02CA-150D1690117N</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>RecordCount : 2</p>
+
+        <div class="row g-3 mx-0 text-center justify-content-between pb-4">
+            <a data-bs-toggle="modal" data-bs-target="#messageModal" class="col-6 btn-col-6 btn-blue">
+                <button type="button" class="btn-blue" style="padding:0px;" >Send to SAP</button>
+            </a>
+            <a href="/goodsreceipt/mainmenu" class="col-6 btn-col-6 btn-black">
+                <button type="button" class="btn-black">Back</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 justify-content-center">
+                <h5>Confirm to delete?</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn-blue w-100">Yes</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn-black w-100" data-bs-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MSG Modal -->
+<div class="modal fade" id="messageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Send to SAP</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+                <p>DOC No. 12345</p>
+                <p>SAP Message: lorem</p>
+                <div class="row px-2">
+                    <button type="button" class="btn-black w-100" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
 
 </div>
 
@@ -289,12 +375,14 @@
     const mvtSelectEl = document.querySelector("#movementType");
     const mvtFormEl = document.querySelectorAll(".mvt-form");
     const formButton = document.querySelector("#formButton");
+    const detailTable = document.querySelector("#detailTable");
 
     function changeForm() {
         for (let i = 0; i < mvtFormEl.length; i++) {
             if (mvtFormEl[i].getAttribute("id") == mvtSelectEl.value) {
                 mvtFormEl[i].classList.remove("d-none");
                 formButton.classList.remove("d-none");
+                detailTable.classList.remove("d-none");
             } else if (mvtSelectEl.value == 'Select') {
                 mvtFormEl[i].classList.add("d-none");
                 formButton.classList.add("d-none");

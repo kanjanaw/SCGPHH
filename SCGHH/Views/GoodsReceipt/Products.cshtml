@@ -44,29 +44,25 @@
                     <div class="col-6 form-check my-1">
                         <input onclick="hideAndShowFleid(false)" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                         <label class="form-check-label font-size-75" for="exampleRadios1">
-                            สมบูรณ์
+                            Receive
                         </label>
                     </div>
                     <div class="col-6 form-check my-1">
                         <input onclick="hideAndShowFleid(true)" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                         <label class="form-check-label font-size-75" for="exampleRadios2">
-                            ไม่สมบูรณ์
+                            Not Receive
                         </label>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="remarkImg" class="d-none row g-3 mt-1 align-items-center text-start">
+        <div id="reasonImg" class="d-none row g-3 mt-1 align-items-center text-start">
             <div class="col-4">
-                <label for="remark" class="font-size-75">เหตุผล</label>
+                <label for="reason" class="font-size-75">Reason</label>
             </div>
             <div class="col-8">
-                <select class="select-size">
-                    <option selected>Select</option>
-                    <option value="1">Domain 1</option>
-                    <option value="2">Domain 2</option>
-                </select>
+                <input type="text" id="reason" class="form-control form-control-22">
             </div>
 
             <div class="col-4 mb-3">
@@ -105,8 +101,9 @@
                     <td>Z02CA-150D1690117N</td>
                 </tr>
                 <tr>
-                    <td colspan="3"></td>
-                    <td class="text-status-blue">สมบูรณ์</td>
+                    <td><a data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="h5 fa-regular fa-trash-can" style="color: #929292;"></i></a></td>
+                    <td colspan="2"></td>
+                    <td class="text-status-blue">Receive</td>
                 </tr>
                 <tr class="border-none">
                     <td>2</td>
@@ -115,9 +112,9 @@
                     <td>Z02CA-150D1690117N</td>
                 </tr>
                 <tr>
-                    <td colspan="1"></td>
+                    <td><a data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="h5 fa-regular fa-trash-can" style="color: #929292;"></i></a></td>
                     <td colspan="2"><img src="https://5.imimg.com/data5/ANDROID/Default/2020/10/QJ/GC/NO/34623073/product-jpeg-500x500.jpg" alt="" height="45px"></td>
-                    <td><span class="text-status-red">ไม่สมบูรณ์</span><br>มีรอยขาด</td>
+                    <td><span class="text-status-red">Not Receive</span><br>มีรอยขาด</td>
                 </tr>
             </tbody>
         </table>
@@ -126,32 +123,46 @@
     <p>RecordCount : 2</p>
 
     <div class="row g-3 mx-0 text-center justify-content-between pb-4">
-        <a href="#" class="col-4 btn-col-4 btn-blue">
+        <a href="#" class="col-6 btn-col-6 btn-blue">
             <button type="button" class="btn-blue" style="padding:0px;">Send to SAP</button>
         </a>
-        <a href="#" class="col-4 btn-col-4 btn-red">
-            <button type="button" class="btn-red ">Clear</button>
-        </a>
-        <a href="/goodsreceipt/mainmenu" class="col-4 btn-col-4 btn-black">
+        <a href="/goodsreceipt/mainmenu" class="col-6 btn-col-6 btn-black">
             <button type="button" class="btn-black">Back</button>
         </a>
     </div>
-
-
-
 </div>
 
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 justify-content-center">
+                <h5>Confirm to delete?</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn-blue w-100">Yes</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn-black w-100" data-bs-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     function hideAndShowFleid(b) {
         if (b == true) {
-            document.getElementById("remarkImg").classList.remove("d-none");
+            document.getElementById("reasonImg").classList.remove("d-none");
         } else {
-            document.getElementById("remarkImg").classList.add("d-none");
+            document.getElementById("reasonImg").classList.add("d-none");
         }
     }
 
-    function saveSuccess() {
+        function saveSuccess() {
         document.getElementById("saveNotice").classList.remove("d-none");
     }
 

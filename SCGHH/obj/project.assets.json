@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeaje\\source\\repos\\SCGP\\SCGHH\\SCGHH.csproj",
+      "projectUniqueName": "C:\\Users\\jeaje\\Documents\\GitHub\\SCGPHH\\SCGHH\\SCGHH.csproj",
       "projectName": "SCGHH",
-      "projectPath": "C:\\Users\\jeaje\\source\\repos\\SCGP\\SCGHH\\SCGHH.csproj",
+      "projectPath": "C:\\Users\\jeaje\\Documents\\GitHub\\SCGPHH\\SCGHH\\SCGHH.csproj",
       "packagesPath": "C:\\Users\\jeaje\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeaje\\source\\repos\\SCGP\\SCGHH\\obj\\",
+      "outputPath": "C:\\Users\\jeaje\\Documents\\GitHub\\SCGPHH\\SCGHH\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jeaje\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -95,16 +95,34 @@
 
         <div class="row g-3 mx-0 text-center justify-content-between pb-4">
             <a href="#" class="col-4 btn-col-4 btn-blue">
-                <button type="button" class="btn-blue" style="padding:0px;">Send to SAP</button>
+                <button type="button" class="btn-blue" style="padding:0px;" data-bs-toggle="modal" data-bs-target="#messageModal">Send to SAP</button>
             </a>
             <a href="#" class="col-4 btn-col-4 btn-red">
                 <button type="button" class="btn-red ">Clear</button>
             </a>
-            <a href="/goodstransfer/mvt" class="col-4 btn-col-4 btn-black">
+            <a href="gt.php" class="col-4 btn-col-4 btn-black">
                 <button type="button" class="btn-black">Back</button>
             </a>
         </div>
 
     </form>
 
+</div>
+
+<!-- MSG Modal -->
+<div class="modal fade" id="messageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Send to SAP</h5>
+            </div>
+            <div class="modal-body">
+                <p>DOC No. 12345</p>
+                <p>SAP Message: lorem</p>
+                <div class="row px-2">
+                    <button type="button" class="btn-black w-100" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
