@@ -14,7 +14,6 @@
 <div class="container px-4 mt-4">
     <form action="">
         <div class="row g-3 mb-0 align-items-center text-start">
-
             <div class="col-4">
                 <label for="batch" class="font-size-75">Movement Type</label>
             </div>
@@ -31,8 +30,8 @@
                     <option value="322">322 - UR > QI</option>
                     <option value="343">343 - BL > UR</option>
                     <option value="344">344 - UR > BL</option>
-                    <option value="Z15">Z15 - เบิก Rewind</option>
-                    <option value="202">202 - รับ Rewind</option>
+                    <option value="Z15-1">Z15 - เบิก Rewind</option>
+                    <option value="202-1">202 - รับ Rewind</option>
                 </select>
             </div>
         </div>
@@ -393,13 +392,6 @@
             <div class="col-8">
                 <!-- get value -->
                 <input type="text" id="materialNo" class="form-control form-control-22">
-            </div>
-
-            <div class="col-4">
-                <label for="receivingMaterialNo" class="font-size-75">To Material No.</label>
-            </div>
-            <div class="col-8">
-                <input type="text" id="receivingMaterialNo" class="form-control form-control-22">
             </div>
 
             <div class="col-4">
@@ -802,22 +794,7 @@
             </div>
 
             <div class="col-4">
-                <label for="storageFrom" class="font-size-75">From Storage</label>
-            </div>
-            <div class="col-8">
-                <select class="select-size">
-                    <option value="">Select</option>
-                    <option value="">1</option>
-                    <option value="">3</option>
-                    <option value="">P1</option>
-                    <option value="">P3</option>
-                    <option value="">S1</option>
-                    <option value="">S3</option>
-                </select>
-            </div>
-
-            <div class="col-4">
-                <label for="storageFrom" class="font-size-75">To Storage</label>
+                <label for="storageFrom" class="font-size-75">Storage</label>
             </div>
             <div class="col-8">
                 <select class="select-size">
@@ -959,22 +936,7 @@
             </div>
 
             <div class="col-4">
-                <label for="storageFrom" class="font-size-75">From Storage</label>
-            </div>
-            <div class="col-8">
-                <select class="select-size">
-                    <option value="">Select</option>
-                    <option value="">1</option>
-                    <option value="">3</option>
-                    <option value="">P1</option>
-                    <option value="">P3</option>
-                    <option value="">S1</option>
-                    <option value="">S3</option>
-                </select>
-            </div>
-
-            <div class="col-4">
-                <label for="storageFrom" class="font-size-75">To Storage</label>
+                <label for="storageFrom" class="font-size-75">Storage</label>
             </div>
             <div class="col-8">
                 <select class="select-size">
@@ -1012,8 +974,30 @@
             </div>
         </div>
         <!-- end 344 Form -->
-        <!-- Z15 Form -->
-        <div class="row g-3 mt-0 align-items-center text-start d-none mvt-form" id="Z15">
+        <!-- Z15-1 Form -->
+        <div class="row g-3 mt-0 align-items-center text-start d-none mvt-form" id="Z15-1">
+            <div class="col-4">
+                <label for="batchNo" class="font-size-75">GL</label>
+            </div>
+            <div class="col-8">
+                <input type="text" id="batchNo" class="form-control form-control-22">
+            </div>
+            <div class="col-4">
+                <label for="batchNo" class="font-size-75">Cost Center</label>
+            </div>
+            <div class="col-8">
+                <input type="text" id="batchNo" class="form-control form-control-22">
+            </div>
+            <div class="col-4">
+                <label for="batchNo" class="font-size-75">Text</label>
+            </div>
+            <div class="col-8">
+                <input type="text" id="batchNo" class="form-control form-control-22">
+            </div>
+        </div>
+        <!-- end Z15-1 Form -->
+        <!-- Z15-2 Form -->
+        <div class="row g-3 mt-0 align-items-center text-start d-none mvt-form" id="Z15-2">
             <div class="col-4">
                 <label for="batchNo" class="font-size-75">Batch No.</label>
             </div>
@@ -1114,57 +1098,79 @@
                 <input type="text" id="rollBatch" class="form-control form-control-22">
             </div>
         </div>
-        <!-- end Z15 Form -->
-        <!-- 202 Form -->
-        <div class="row g-3 mt-0 align-items-center text-start d-none mvt-form" id="202">
+        <!-- end Z15-2 Form -->
+        <!-- 202-1 Form -->
+        <div class="row g-3 mt-0 align-items-center text-start d-none mvt-form" id="202-1">
             <div class="col-4">
-                <label for="batchNo" class="font-size-75">Batch No.</label>
+                <label for="batchNo" class="font-size-75">Material Slip</label>
             </div>
             <div class="col-8">
-                <!-- get value -->
                 <input type="text" id="batchNo" class="form-control form-control-22">
             </div>
             <div class="col-4">
-                <label for="materialNo" class="font-size-75">Material No.</label>
+                <label for="materialNo" class="font-size-75">GL</label>
             </div>
             <div class="col-8">
-                <!-- get value -->
                 <input type="text" id="materialNo" class="form-control form-control-22">
             </div>
             <div class="col-4">
-                <label for="fromPlant" class="font-size-75">Plant</label>
-            </div>
-            <div class="col-8">
-                <select class="select-size">
-                    <option value="">Select</option>
-                    <option value="">7567</option>
-                    <option value="">7521</option>
-                    <option value="">7523</option>
-                    <option value="">7531</option>
-                    <option value="">7533</option>
-                </select>
-            </div>
-            <div class="col-4">
-                <label for="storageFrom" class="font-size-75">Storage</label>
-            </div>
-            <div class="col-8">
-                <select class="select-size">
-                    <option value="">Select</option>
-                    <option value="">1</option>
-                    <option value="">3</option>
-                    <option value="">P1</option>
-                    <option value="">P3</option>
-                    <option value="">S1</option>
-                    <option value="">S3</option>
-                </select>
-            </div>
-            <div class="col-4">
-                <label for="itemText" class="font-size-75">Text</label>
+                <label for="itemText" class="font-size-75">Reason Order</label>
             </div>
             <div class="col-8">
                 <input type="text" id="itemText" class="form-control form-control-22">
             </div>
             <div class="col-4">
+                <label for="entryWeight" class="font-size-75">Text</label>
+            </div>
+            <div class="col-8">
+                <input type="text" id="entryWeight" class="form-control form-control-22">
+            </div>
+        </div>
+        <!-- end 202-1 Form -->
+        <!-- 202-2 Form -->
+        <div class="row g-3 mt-0 align-items-center text-start d-none mvt-form" id="202-2">
+            <div class="col-4">
+                <label for="batchNo" class="font-size-75">Batch No.</label>
+            </div>
+            <div class="col-8">
+                <!-- get value -->
+                <input type="text" id="batchNo" class="form-control form-control-22">
+            </div>
+            <div class="col-4">
+                <label for="materialNo" class="font-size-75">Material No.</label>
+            </div>
+            <div class="col-8">
+                <!-- get value -->
+                <input type="text" id="materialNo" class="form-control form-control-22">
+            </div>
+            <div class="col-4">
+                <label for="fromPlant" class="font-size-75">Plant</label>
+            </div>
+            <div class="col-8">
+                <select class="select-size">
+                    <option value="">Select</option>
+                    <option value="">7567</option>
+                    <option value="">7521</option>
+                    <option value="">7523</option>
+                    <option value="">7531</option>
+                    <option value="">7533</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <label for="storageFrom" class="font-size-75">Storage</label>
+            </div>
+            <div class="col-8">
+                <select class="select-size">
+                    <option value="">Select</option>
+                    <option value="">1</option>
+                    <option value="">3</option>
+                    <option value="">P1</option>
+                    <option value="">P3</option>
+                    <option value="">S1</option>
+                    <option value="">S3</option>
+                </select>
+            </div>
+            <div class="col-4">
                 <label for="entryWeight" class="font-size-75">Weight</label>
             </div>
             <div class="col-8">
@@ -1177,13 +1183,6 @@
             <div class="col-8">
                 <!-- get value -->
                 <input type="text" id="entryUnit" class="form-control form-control-22">
-            </div>
-            <div class="col-4">
-                <label for="GL" class="font-size-75">GL</label>
-            </div>
-            <div class="col-8">
-                <!-- get value -->
-                <input type="text" id="GL" class="form-control form-control-22">
             </div>
             <div class="col-4">
                 <label for="contractNo" class="font-size-75">PI No.</label>
@@ -1228,7 +1227,7 @@
                 <input type="text" id="rollBatch" class="form-control form-control-22">
             </div>
         </div>
-        <!-- end 202 Form -->
+        <!-- end 202-2 Form -->
 
 
         <div class="row mx-0 my-4 justify-content-between text-center d-none" id="formButton">
@@ -1237,6 +1236,15 @@
             </a>
             <a href="#" class="col-6 btn-red btn-col-6">
                 <button type="button" class="btn-red">Clear</button>
+            </a>
+        </div>
+
+        <div class="row mx-0 my-4 justify-content-between text-center d-none" id="formButton2">
+            <a href="#" class="col-6 btn-blue btn-col-6" onclick="Z15202()">
+                <button type="button" class="btn-blue">Next</button>
+            </a>
+            <a href="#" class="col-6 btn-black btn-col-6">
+                <button type="button" class="btn-black">Back</button>
             </a>
         </div>
 
@@ -1273,9 +1281,19 @@
             </table>
         </div>
 
-        <p>RecordCount : 2</p>
 
-        <div class="row g-3 mx-0 text-center justify-content-between pb-4">
+        <p class="mb-0">RecordCount : 2</p>
+
+        <div class="row g-3 mt-0 align-items-center text-start d-none" id="toMaterial">
+            <div class="col-4">
+                <label for="batchNo" class="font-size-75">To Material No.</label>
+            </div>
+            <div class="col-8">
+                <input type="text" id="batchNo" class="form-control form-control-22">
+            </div>
+        </div>
+
+        <div class="row g-3 mx-0 mt-3 text-center justify-content-between pb-4">
             <a data-bs-toggle="modal" data-bs-target="#messageModal" class="col-6 btn-col-6 btn-blue">
                 <button type="button" class="btn-blue" style="padding:0px;" >Send to SAP</button>
             </a>
@@ -1333,19 +1351,51 @@
     const mvtSelectEl = document.querySelector("#movementType");
     const mvtFormEl = document.querySelectorAll(".mvt-form");
     const formButton = document.querySelector("#formButton");
+    const formButton2 = document.querySelector("#formButton2");
     const detailTable = document.querySelector("#detailTable");
 
     function changeForm() {
         for (let i = 0; i < mvtFormEl.length; i++) {
-            if (mvtFormEl[i].getAttribute("id") == mvtSelectEl.value) {
+            if (mvtFormEl[i].getAttribute("id") == mvtSelectEl.value && (mvtFormEl[i].getAttribute("id") != 'Z15-1') && (mvtFormEl[i].getAttribute("id") != '202-1')) {
                 mvtFormEl[i].classList.remove("d-none");
                 formButton.classList.remove("d-none");
                 detailTable.classList.remove("d-none");
+                if (mvtFormEl[i].getAttribute("id") == '309' || mvtFormEl[i].getAttribute("id") == '310') {
+                    document.getElementById("toMaterial").classList.remove("d-none");
+                } else {
+                    document.getElementById("toMaterial").classList.add("d-none");
+                }
+                formButton2.classList.add("d-none");
+            } else if (mvtFormEl[i].getAttribute("id") == mvtSelectEl.value && (mvtFormEl[i].getAttribute("id") == 'Z15-1' || (mvtFormEl[i].getAttribute("id") == '202-1'))) {
+                mvtFormEl[i].classList.remove("d-none");
+                formButton2.classList.remove("d-none");
+                formButton.classList.add("d-none");
+                detailTable.classList.add("d-none");
             } else if (mvtSelectEl.value == 'Select') {
                 mvtFormEl[i].classList.add("d-none");
                 formButton.classList.add("d-none");
             } else {
                 mvtFormEl[i].classList.add("d-none");
+            }
+        }
+    }
+
+    function Z15202() {
+        for (let i = 0; i < mvtFormEl.length; i++) {
+            if (mvtFormEl[i].getAttribute("id") == 'Z15-1') {
+                document.getElementById("Z15-1").classList.add("d-none");
+                document.getElementById("Z15-2").classList.remove("d-none");
+                document.getElementById("202-2").classList.add("d-none");
+                formButton2.classList.add("d-none");
+                formButton.classList.remove("d-none");
+                detailTable.classList.remove("d-none");
+            } else if (mvtFormEl[i].getAttribute("id") == '202-1') {
+                document.getElementById("202-1").classList.add("d-none");
+                document.getElementById("202-2").classList.remove("d-none");
+                document.getElementById("Z15-2").classList.add("d-none");
+                formButton2.classList.add("d-none");
+                formButton.classList.remove("d-none");
+                detailTable.classList.remove("d-none");
             }
         }
     }

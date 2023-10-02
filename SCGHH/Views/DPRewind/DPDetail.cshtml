@@ -37,12 +37,12 @@
             </div>
         </div>
 
-        <div class="row mx-0 mt-5 justify-content-between text-center">
+        <div class="row mx-0 my-4 justify-content-between text-center" id="formButton">
             <a href="#" class="col-6 btn-blue btn-col-6">
-                <button type="submit" class="btn-blue">Send to SAP</button>
+                <button type="button" class="btn-blue">Save</button>
             </a>
-            <a href="/dprewind/mainmenu" class="col-6 btn-black btn-col-6">
-                <button type="button" class="btn-black">Back</button>
+            <a href="#" class="col-6 btn-red btn-col-6">
+                <button type="button" class="btn-red">Clear</button>
             </a>
         </div>
 
@@ -52,6 +52,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th></th>
                     <th scope="col">No</th>
                     <th scope="col">Batch</th>
                     <th scope="col">Qty</th>
@@ -60,6 +61,7 @@
             </thead>
             <tbody>
                 <tr>
+                    <td><a data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="h5 fa-regular fa-trash-can" style="color: #929292;"></i></a></td>
                     <td>1</td>
                     <td>118A07708A</td>
                     <td>1.280</td>
@@ -67,6 +69,65 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+     <p class="mb-0">RecordCount : 1</p>
+
+        <div class="row g-3 mt-0 align-items-center text-start">
+            <div class="col-4">
+                <label for="batchNo" class="font-size-75">Text Item</label>
+            </div>
+            <div class="col-8">
+                <input type="text" id="batchNo" class="form-control form-control-22" >
+            </div>
+        </div>
+
+        <div class="row mx-0 mt-4 justify-content-between text-center">
+            <a href="#" class="col-6 btn-blue btn-col-6">
+                <button type="submit" class="btn-blue" data-bs-toggle="modal" data-bs-target="#messageModal">Send to SAP</button>
+            </a>
+        <a href="/dprewind/mainmenu" class="col-6 btn-black btn-col-6">
+                <button type="button" class="btn-black">Back</button>
+            </a>
+        </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 justify-content-center">
+                    <h5>Confirm to delete?</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" class="btn-blue w-100">Yes</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn-black w-100" data-bs-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MSG Modal -->
+    <div class="modal fade" id="messageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Send to SAP</h5>
+                </div>
+                <div class="modal-body">
+                    <p>DOC No. 12345</p>
+                    <p>SAP Message: lorem</p>
+                    <div class="row px-2">
+                        <button type="button" class="btn-blue w-100" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
