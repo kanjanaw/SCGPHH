@@ -62,7 +62,7 @@
         </div>
 
         <div class="row mx-0 mt-5 justify-content-between text-center">
-            <a href="#" class="col-6 btn-blue btn-col-6">
+            <a href="#" class="col-6 btn-blue btn-col-6" data-bs-toggle="modal" data-bs-target="#messageModal">
                 <button type="submit" class="btn-blue">Send to SAP</button>
             </a>
             <a href="/goodsissue/giviewstatusdetail" class="col-6 btn-black btn-col-6">
@@ -71,6 +71,24 @@
         </div>
 
     </form>
+
+    <!-- MSG Modal -->
+    <div class="modal fade" id="messageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Send to SAP</h5>
+                </div>
+                <div class="modal-body">
+                    <p>DOC No. 12345</p>
+                    <p>SAP Message: lorem</p>
+                    <div class="row px-2">
+                        <button type="button" class="btn-blue w-100" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="row mt-4 mx-0">
