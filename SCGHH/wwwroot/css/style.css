@@ -107,6 +107,10 @@ a:hover {
     padding-bottom: 0.2em;
 }
 
+a > .navigate-text {
+    text-decoration: underline;
+}
+
 .btn-menu {
     border: 1px solid rgba(194, 194, 194, 0.40) !important;
     background: #F5F5F5;
