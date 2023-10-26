@@ -32,6 +32,10 @@ namespace SCGHH.Controllers
         {
             return View();
         }
+        public IActionResult GIViewStatusDetailOnly()
+        {
+            return View();
+        }
         public IActionResult GIViewStatusScanData()
         {
             return View();

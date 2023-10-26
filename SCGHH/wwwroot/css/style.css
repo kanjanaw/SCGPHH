@@ -40,11 +40,19 @@ input:focus, select option{
 .col-4 label {
     font-weight: 500 !important;
 }
-button{
+button, .link-button{
     border: none !important;
     font-weight: 700 !important;
     color: #FFF;
     height: 25px;
+}
+
+.link-button, .link-button:hover {
+    text-align: center;
+    color: #FFF !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
 }
 
 .btn-col-4 {
@@ -67,9 +75,9 @@ button{
     background: #FF6352;
 }
 
-.btn-black {
+.btn-black, .btn-black:hover {
     background: #E6E6E6;
-    color: #222;
+    color: #222 !important;
 }
 
 .px-35 {
